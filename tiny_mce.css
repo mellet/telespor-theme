@@ -1,0 +1,656 @@
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+@import url("https://fonts.googleapis.com/css?family=Lato:700,900,300,100,400");
+html {
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  font-family: sans-serif;
+  /* 1 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+  background-color: transparent;
+  /* 1 */
+  /**
+     * Remove the outline on focused links when they are also active or hovered
+     * in all browsers (opinionated).
+     */ }
+  a:active, a:hover {
+    outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Page colors */
+body {
+  background: #f2f3f4;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px; }
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1em;
+  margin-bottom: 22px; }
+
+h2 {
+  font-size: 1.625em;
+  /* 26px/16px */
+  line-height: 1.2692307692307692em;
+  /* 33px/26px */
+  margin-bottom: 11px; }
+
+h3 {
+  font-size: 1.25em; }
+
+h4 {
+  font-size: 1.125; }
+
+p {
+  font-size: 1em;
+  line-height: 1.5714285714285714em;
+  margin-bottom: 11px; }
+
+a {
+  color: #3fa5e3;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.price-ekstra-info {
+  background: rgba(251, 249, 214, 0.25);
+  border-top-left-radius: 5px;
+  font-size: 0.8em;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  color: #6d7179;
+  border: 1px solid #e1e1e1;
+  padding: 10px 20px; }
+  .price-ekstra-info .mva-info {
+    border-bottom: 1px solid #e1e1e1;
+    color: #222;
+    margin-bottom: 5px;
+    padding-bottom: 5px; }
+
+.price-old-info {
+  margin: 0 auto;
+  background: #fffee9;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #666;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  font-size: 0.85em;
+  max-width: 650px; }
+  .price-old-info a {
+    color: #785cab; }
+    .price-old-info a:hover {
+      color: #785cab; }
+
+.ts-price-extras {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 50px; }
+
+.ts-prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 50px auto; }
+
+@media (max-width: 1250px) {
+  .ts-prices,
+  .ts-price-extras {
+    margin: 50px auto;
+    max-width: 800px; } }
+
+@media (max-width: 820px) {
+  .ts-prices,
+  .ts-price-extras {
+    margin: 50px auto;
+    max-width: 400px; } }
+
+.ts-price-table {
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  margin: 10px;
+  padding: 10px;
+  width: 380px; }
+  .ts-price-table h3 {
+    border-bottom: 1px solid #e1e1e1;
+    color: #444;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center; }
+  .ts-price-table .price {
+    border-bottom: 1px solid #e1e1e1;
+    color: #ccc;
+    padding: 30px 20px;
+    text-align: center; }
+  .ts-price-table .big-price {
+    color: #222;
+    font-size: 1.5em;
+    font-weight: bold; }
+  .ts-price-table .price-info ul {
+    color: #6d7179;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .ts-price-table .price-info li {
+    border-bottom: 1px dashed #e1e1e1;
+    font-size: .9em;
+    padding: 10px 20px; }
+    .ts-price-table .price-info li:last-child {
+      border-bottom: 0; }
+    .ts-price-table .price-info li .fa-check-circle-o {
+      color: #00a474;
+      margin-right: 5px; }
+
+.ts-price-cta-wrap {
+  padding: 50px;
+  text-align: center; }
+  .ts-price-cta-wrap .ts-price-cta {
+    background: none;
+    border: 1px solid #785cab;
+    border-radius: 3px;
+    color: #785cab;
+    padding: 10px 20px; }
+
+.ts-price-klaver {
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  padding: 15px;
+  max-width: 500px;
+  margin: 50px auto; }
+  .ts-price-klaver h2 {
+    background: #f9f9f9;
+    margin: -15px 0 20px -15px;
+    width: calc(100% + 30px);
+    border-bottom: 1px solid #e1e1e1;
+    padding: 8px 15px;
+    color: #444;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 400; }
+  .ts-price-klaver p {
+    color: #6d7179;
+    font-weight: 300;
+    margin: 0 0 20px 0; }
+  .ts-price-klaver .klaver-wrap {
+    text-align: center; }
+    .ts-price-klaver .klaver-wrap a:first-child {
+      margin-right: 10px; }
+
+.ts-extras-title {
+  font-weight: 300;
+  text-align: center; }
+
+.ts-price-calculator {
+  background: #fff;
+  padding: 50px 0; }
+  .ts-price-calculator h2 {
+    font-weight: 300;
+    margin: 0 0 50px;
+    text-align: center; }
+  .ts-price-calculator .calc-name {
+    text-align: center;
+    font-weight: 400;
+    color: #785cab; }
+  .ts-price-calculator .ts-price-calc-unit {
+    margin: 0 auto;
+    max-width: 400px;
+    font-weight: 300; }
+    .ts-price-calculator .ts-price-calc-unit h3 {
+      margin: 20px 0 10px 0;
+      font-size: 1em;
+      font-weight: 400;
+      text-align: center; }
+    .ts-price-calculator .ts-price-calc-unit .calc-subsc {
+      width: 180px;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 10px; }
+      .ts-price-calculator .ts-price-calc-unit .calc-subsc .calc-subsc-type {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: 25px; }
+        .ts-price-calculator .ts-price-calc-unit .calc-subsc .calc-subsc-type input {
+          -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+              align-self: center;
+          margin-right: 5px; }
+        .ts-price-calculator .ts-price-calc-unit .calc-subsc .calc-subsc-type span {
+          -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+              align-self: center; }
+    .ts-price-calculator .ts-price-calc-unit .calc-number {
+      font-weight: 400;
+      margin: 30px auto;
+      width: 100px; }
+      .ts-price-calculator .ts-price-calc-unit .calc-number input {
+        font-weight: 300;
+        width: 50px;
+        border-radius: 5px;
+        border: 1px solid #e1e1e1;
+        padding: 5px;
+        text-align: center; }
+  .ts-price-calculator .ts-btn-calc-submit {
+    margin: 50px 0;
+    text-align: center; }
+  .ts-price-calculator .price-results-max {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    display: none;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 15px;
+    text-align: center; }
+    .ts-price-calculator .price-results-max p {
+      margin: 0 0 20px; }
+  .ts-price-calculator .price-results {
+    display: none;
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 375px;
+    position: relative; }
+    .ts-price-calculator .price-results .print-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.2em; }
+    .ts-price-calculator .price-results h2 {
+      margin: 0 0 15px 0; }
+    .ts-price-calculator .price-results .price-results-section {
+      margin-bottom: 30px;
+      border: 1px solid #e1e1e1;
+      border-radius: 5px;
+      overflow: hidden; }
+      .ts-price-calculator .price-results .price-results-section .price-section-title {
+        background: rgba(158, 158, 166, 0.1);
+        padding: 10px;
+        border-bottom: 1px solid #e1e1e1; }
+      .ts-price-calculator .price-results .price-results-section h3 {
+        font-size: 1.1em;
+        font-weight: 300;
+        margin: 0 0 5px 0; }
+      .ts-price-calculator .price-results .price-results-section em {
+        display: block;
+        font-size: 0.8em;
+        color: #ccc; }
+      .ts-price-calculator .price-results .price-results-section .price-section {
+        border-bottom: 1px dotted #e1e1e1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 10px; }
+        .ts-price-calculator .price-results .price-results-section .price-section .price-desc {
+          display: inline-block;
+          font-weight: 400;
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1; }
+        .ts-price-calculator .price-results .price-results-section .price-section:last-child {
+          margin-bottom: 0;
+          border-bottom: 0; }
+
+.wp-editor {
+  background: #fff;
+  margin: 10px; }
+
+.phone-number {
+  font-size: 1.2em; }

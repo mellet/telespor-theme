@@ -1,0 +1,177 @@
+.telespor-front-page-jumbo {
+	background: $dark-black url('images/nature_v2.jpg') no-repeat center;
+	background-size: cover;
+	border-bottom: 2px solid $dark-black;
+    height: 765px;
+}
+
+.telespor-jumbo-wrapper {
+	height: 100%;
+	position: relative;
+	text-align: center;
+
+	.telespor-description {
+		background: $dark-black-70;
+		border-bottom: 1px solid $black;
+		font-weight: bold;
+		left: 0;
+		margin: 0 auto;
+		padding: 120px 15px 50px;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		h1 {
+			border-radius: 5px;
+			color: $white;
+			font-weight: 900;
+			margin: 0 auto;
+			padding: 0;
+
+			span {
+				font-weight: 300;
+			}
+
+		}
+
+		p {
+			color: $off-white;
+			font-weight: 300;
+			text-align: center;
+		}
+
+		.produkt-cta {
+			background: $primary-color-80;
+			border-radius: 5px;
+			color: $white;
+			display: inline-block;
+			font-weight: 300;
+            margin: 50px 0 0;
+			padding: 10px 20px;
+			text-decoration: none;
+			transition: background 0.3s;
+
+			&:hover {
+				background: $primary-color;
+			}
+		}
+
+	}
+
+}
+
+@media (max-width: 800px) {
+    .telespor-front-page-jumbo {
+        height: 500px;
+
+        .telespor-description {
+    		h1 {
+    			font-size: 1.7em;
+                line-height: 1.2em;
+    		}
+
+    		p {
+                font-size: 0.9em;
+    		}
+        }
+    }
+}
+
+.telespor-features {
+	background: $white;
+	border-bottom: 1px solid $grey-border;
+	padding: 60px 0;
+
+	h2 {
+		color: $primary-color;
+		font-size: 2em;
+		font-weight: 300;
+		margin: 0 0 60px;
+		text-align: center;
+	}
+
+    .product-cta-wrapper {
+        padding: 50px 0 0;
+        text-align: center;
+    }
+
+}
+
+.feature-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: $site-width;
+    padding: 0 15px;
+
+	.single-feature {
+        display: flex;
+        margin: 0 0 40px;
+        padding: 15px;
+		width: 400px;
+
+		img {
+			height: 30px;
+            padding: 0 20px 0 0;
+			width: 50px;
+		}
+
+		.single-feature-description {
+			flex: 1;
+
+			h3 {
+				color: $text-title-grey;
+				margin: 0;
+			}
+
+			p {
+				color: $text-p-grey;
+				font-size: 0.85em;
+				line-height: 1.5em;
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width: 1230px) {
+    .feature-wrapper {
+        margin: 0 auto;
+    	width: 830px;
+    }
+}
+
+@media (max-width: 830px) {
+    .feature-wrapper {
+        margin: 0 auto;
+        max-width: 400px;
+        width: auto;
+
+    	.single-feature {
+            display: flex;
+            margin: 0 0 40px;
+            padding: 15px;
+    		width: 100%;
+        }
+    }
+}
+
+.telespor-news {
+    padding: 50px 0 0 0;
+
+    h2 {
+		color: $primary-color;
+		font-size: 2em;
+		font-weight: 300;
+        margin: 0 0 50px;
+        text-align: center;
+    }
+
+}
+
+.user-dashboard-wrap {
+    padding: 0 0 50px 0;
+    text-align: center;
+}

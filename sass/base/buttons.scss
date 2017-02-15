@@ -1,0 +1,57 @@
+.ts-btn {
+    border: 0;
+    background: rgba($primary-color, 0.85);
+    border-radius: 5px;
+    color: $white;
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: 300;
+    transition: background 0.3s;
+
+    &:hover {
+        background: rgba($primary-color, 1);
+        text-decoration: none;
+    }
+
+}
+
+.ts-btn-simple {
+    background: transparent;
+    border: 1px solid $primary-color;
+    border-radius: 3px;
+    color: $primary-color;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: border, color .3s;
+
+    &:hover {
+        border: 1px solid darken($primary-color, 25);
+        color: darken($primary-color, 25);
+        text-decoration: none;
+    }
+
+}
+
+.ts-btn-small {
+    padding: 5px 10px;
+}
+
+.ts-btn-big {
+    padding: 10px 25px;
+}
+
+@mixin ts-simple-btn {
+    background: transparent;
+    border: 1px solid $primary-color;
+    border-radius: 3px;
+    color: $primary-color;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: border, color .3s;
+
+    &:hover {
+        border: 1px solid darken($primary-color, 25);
+        color: darken($primary-color, 25);
+        text-decoration: none;
+    }
+}

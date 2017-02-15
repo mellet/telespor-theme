@@ -1,0 +1,26 @@
+/*
+Theme Name: Telespor AS
+Theme URI: http://telespor.no
+Author: Mellet Solbakk
+Description: Telespor Theme.
+Version: 1.13
+Tags: telespor
+*/
+
+@import 'base/normalize';
+@import 'base/mixins';
+@import 'base/globals';
+@import 'base/typography';
+@import 'base/buttons';
+@import 'base/header';
+@import 'base/footer';
+@import 'base/layout';
+@import 'base/jumbo';
+
+// Pages
+@import 'styles/front-page';
+@import 'styles/page-news-list';
+@import 'styles/page-product';
+@import 'styles/page-price';
+@import 'styles/page-contact';
+@import 'styles/page-single';

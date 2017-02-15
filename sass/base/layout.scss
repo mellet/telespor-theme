@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+	box-sizing: inherit;
+
+	&::before {
+		box-sizing: inherit;
+	}
+
+	&::after {
+		box-sizing: inherit;
+	}
+}
+
+.telespor-container {
+    min-height: calc(100vh - 280px);
+}
+
+.page-wrap {
+	margin: 0 auto;
+    max-width: $site-width;
+    padding: 0 15px;
+}
+
+img {
+	height: auto;
+    max-width: 100%;
+}
+
+.telespor-wrap {
+    @extend %clearfix;
+    margin: 0 auto;
+    max-width: $site-width;
+    padding: 0 15px;
+}
+
+.alignright {
+    float: right;
+}
+
+.site-section-white {
+    background: $white;
+    padding: 50px 0;
+}
+
+.site-section {
+    padding: 50px 0;
+}
+
+/* Splitters */
+.ts-grid {
+    display: flex;
+    justify-content: space-between;
+
+    .ts-1of2 {
+        padding: 0 15px 0 0;
+        width: 50%;
+    }
+
+    .ts-2of2 {
+        padding: 0 0 0 15px;
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .ts-grid {
+        flex-direction: column;
+
+        .ts-1of2,
+        .ts-2of2 {
+            padding: 0;
+            width: 100%;
+        }
+    }
+}
+
+.margin-t-b-50 {
+    margin: 50px 0;
+}

@@ -1,0 +1,103 @@
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+
+    .ts-news-item {
+        @extend %clearfix;
+        background: $white;
+        margin: 25px;
+        width: 349px;
+
+        .ts-news-image {
+            height: 200px;
+            position: relative;
+            z-index: 480;
+
+            .darken-image {
+                background: $dark-black-70;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 500;
+            }
+
+            h2 {
+                bottom: 20px;
+                color: $white;
+                font-size: 1.3em;
+                font-weight: 300;
+                left: 20px;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                right: 20px;
+                text-align: left;
+                z-index: 510;
+            }
+
+            .ts-news-link {
+                color: $white;
+                transition: 0.2s color;
+
+                &:hover {
+                    color: $green;
+                    text-decoration: none;
+                }
+            }
+
+        }
+
+        p {
+            color: $text-p-grey;
+            font-weight: 300;
+            padding: 0 20px;
+        }
+
+        .ts-news-article-time {
+            border-bottom: 1px solid $grey-border;
+            color: $text-time;
+            font-size: 0.75em;
+            font-weight: 300;
+            margin: 0;
+            padding: 5px 20px;
+            text-align: right;
+        }
+
+        .ts-news-excerpt {
+            margin: 0;
+            padding: 10px 20px;
+        }
+
+    }
+
+}
+
+@media (max-width: 1230px) {
+
+    .news-list {
+        max-width: 930px;
+
+        .ts-news-item {
+            background: $white;
+            width: 400px;
+        }
+    }
+
+}
+
+@media (max-width: 930px) {
+
+    .news-list {
+        max-width: 400px;
+
+        .ts-news-item {
+            background: $white;
+            margin: 0 0 40px;
+            max-width: 400px;
+        }
+    }
+
+}

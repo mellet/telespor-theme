@@ -1,0 +1,46 @@
+//Layout colors
+$site-width: 1230px;
+$black: #1a2126;
+$dark-black: #222;
+$dark-black-70: rgba($dark-black, 0.5);
+$primary-color: #785cab;
+$primary-color-80: rgba($primary-color, 0.8);
+$primary-color-30: rgba($primary-color, 0.3);
+
+/* Page colors */
+$product-primary: #603e8e;
+$prodcut-primary-hack: rgba($product-primary, 0.99);
+
+$secondary-color: #fff;
+
+$orange: #ea5405;
+$green: #00a474;
+$darkblue: #142736;
+$grey: #ccc;
+$b-grey: #bbb;
+$lightgrey: #9e9ea6;
+$lightgrey-text: #a0a0a0;
+$black: #222;
+$transparent-black: rgba($black, 0.95);
+$transparent-black-70: rgba($black, 0.7);
+
+$white: #fff;
+$white-30: rgba($white, 0.3);
+$off-white: #f9f9f9;
+
+// Site
+$body-bg: #f2f3f4;
+$link-color: #3fa5e3;
+$grey-border: #e1e1e1;
+
+// Text colors
+$text-title-grey: #444;
+$text-p-grey: #6d7179;
+$text-time: #868c96;
+$text-darkgreen: #1b4241;
+
+//Jumbo colors
+$jumbo-contact: #3c4b5b;
+
+$error-color: #ffcccc;
+$error-color-text: #3f0000;

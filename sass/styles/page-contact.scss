@@ -1,0 +1,132 @@
+.contact-jumbo {
+    background: $jumbo-contact;
+}
+
+.contact-box {
+    background: $white;
+    border: 1px solid $grey-border;
+    margin-bottom: 30px;
+    width: 100%;
+
+    .contact-box-title {
+        border-bottom: 1px solid $grey-border;
+        color: $text-title-grey;
+        display: flex;
+        margin: 0 0 20px;
+        padding: 10px 20px;
+
+        h2 {
+            flex: 1;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+        }
+
+        i {
+            align-self: center;
+            font-size: 1.7em;
+        }
+
+    }
+
+    p {
+        color: $text-p-grey;
+        font-weight: 300;
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    .warning {
+        color: $b-grey;
+        font-size: 0.75em;
+    }
+
+    .country-code {
+        color: $b-grey;
+    }
+}
+
+.contact-phone {
+    .phone-number {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 930px) {
+    .ts-contact-methods {
+
+        .contact-box {
+            margin: 0;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+    }
+}
+
+
+
+.ts-contact-form {
+    background: $white;
+    border: 1px solid $grey-border;
+    padding: 15px;
+    width: 100%;
+
+    h3 {
+        display: none;
+    }
+
+    .ninja-forms-req-symbol {
+        color: $error-color-text;
+    }
+
+    .nf-form-fields-required {
+        display: none;
+    }
+
+    .nf-error {
+        input,
+        textarea {
+            border: 1px solid $error-color;
+        }
+    }
+
+    .nf-error-required-error,
+    .nf-error-invalid-email {
+        background: $error-color;
+        border: 1px solid $error-color;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: $error-color-text;
+        font-size: 0.8em;
+        margin-top: -6px;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .nf-error-field-errors {
+        color: $error-color-text;
+        font-size: 0.8em;
+    }
+
+    // Hide recaptcha title
+    .recaptcha-wrap {
+        .nf-field-label {
+            display: none;
+        }
+    }
+
+    input,
+    textarea {
+        border: 1px solid $grey-border;
+        outline: none;
+        padding: 5px;
+        resize: none;
+    }
+
+    input {
+        &[type='button'] {
+            @include ts-simple-btn;
+        }
+    }
+
+}

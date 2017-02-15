@@ -1,0 +1,185 @@
+.telespor-header {
+	height: 70px;
+	left: 0;
+    position: absolute;
+	right: 0;
+    top: 0;
+	z-index: 9999;
+
+    .telespor-mobile-hamburger {
+        display: none;
+    }
+
+    .telespor-header-wrap {
+		@extend %clearfix;
+		height: 70px;
+        margin: 0 auto;
+        max-width: $site-width;
+        padding: 0 15px;
+
+        .telespor-header-logo {
+            background: url('images/telespor_logo.svg') center / 115px no-repeat;
+            float: left;
+			height: 70px;
+            margin: 0;
+            text-indent: -9999px;
+
+            a {
+                display: block;
+				height: 70px;
+                width: 150px;
+            }
+
+        }
+
+        .telespor-header-main-nav {
+            float: right;
+            margin: 35px 0 0;
+            overflow: auto;
+            transform: translateY(-50%);
+
+            .telespor-close-nav {
+                display: none;
+            }
+
+            ul {
+				@extend %clearfix;
+				font-size: 0.75em;
+                list-style: none;
+				margin: 0;
+                padding: 0;
+
+                li {
+					float: left;
+                    margin: 0 15px 0 0;
+                }
+
+                a {
+					border-radius: 15px;
+					color: $white;
+					display: block;
+					padding: 6px 10px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    transition: background 0.3s;
+
+                    i {
+                        display: none;
+                        font-size: 1.3em;
+                        margin: 0 10px 0 0;
+                        text-align: center;
+                        width: 20px;
+                    }
+
+                    &:hover {
+                        background: $white-30;
+                    }
+                }
+
+                .sign-in-button {
+                    background: $primary-color-30;
+                    border-radius: 15px;
+                    transition: background 0.3s;
+
+                    &:hover {
+                        background: $primary-color;
+                    }
+
+                    &:hover > a {
+						background: transparent;
+                        color: $white;
+                    }
+
+                    a {
+                        color: $white;
+                        transition: color 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 820px) {
+    .telespor-header {
+        height: 60px;
+
+        .telespor-mobile-hamburger {
+            background: url('images/icons/hamburger.svg') right / 25px no-repeat;
+            display: block;
+            float: right;
+            height: 60px;
+            width: 60px;
+        }
+
+        .telespor-header-logo {
+            background: url('images/telespor_logo.svg') 0 12px / 100px no-repeat !important;
+
+            a {
+                height: 60px !important;
+                width: 100px !important;
+            }
+
+        }
+
+        .telespor-header-main-nav {
+            background: $transparent-black;
+            float: none !important;
+            height: 100vh;
+            margin: 0 !important;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            transform: none !important;
+            transition: right .5s;
+            width: 250px;
+
+            .telespor-mobile-nav-header {
+                background: $b-grey;
+                display: flex;
+                float: left;
+                margin: 0 0 15px;
+                width: 100%;
+            }
+
+            .telespor-close-nav {
+                align-self: center;
+                display: block !important;
+                font-size: 1.5em;
+                opacity: 0.7;
+                padding: 5px 15px;
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            ul {
+
+                li {
+                    display: block;
+                    margin: 0 0 10px !important;
+                    width: 100%;
+
+                    a {
+                        border-radius: 0 !important;
+                        padding: 8px 15px !important;
+
+                        i {
+                            display: inline-block !important;
+                        }
+                    }
+
+                }
+
+                .sign-in-button {
+                    border-radius: 0 !important;
+                }
+
+            }
+
+        }
+
+    }
+}

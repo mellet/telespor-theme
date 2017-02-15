@@ -1,0 +1,1486 @@
+/*
+Theme Name: Telespor AS
+Theme URI: http://telespor.no
+Author: Mellet Solbakk
+Description: Telespor Theme.
+Version: 1.13
+Tags: telespor
+*/
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+@import url("https://fonts.googleapis.com/css?family=Lato:700,900,300,100,400");
+html {
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  font-family: sans-serif;
+  /* 1 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+  background-color: transparent;
+  /* 1 */
+  /**
+     * Remove the outline on focused links when they are also active or hovered
+     * in all browsers (opinionated).
+     */ }
+  a:active, a:hover {
+    outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+.telespor-header .telespor-header-wrap, .telespor-header .telespor-header-wrap .telespor-header-main-nav ul, .footer-wrap, .telespor-wrap, .news-list .ts-news-item, .product-specifications {
+  zoom: 1; }
+  .telespor-header .telespor-header-wrap::before, .telespor-header .telespor-header-wrap .telespor-header-main-nav ul::before, .footer-wrap::before, .telespor-wrap::before, .news-list .ts-news-item::before, .product-specifications::before {
+    content: '';
+    display: table; }
+  .telespor-header .telespor-header-wrap::after, .telespor-header .telespor-header-wrap .telespor-header-main-nav ul::after, .footer-wrap::after, .telespor-wrap::after, .news-list .ts-news-item::after, .product-specifications::after {
+    clear: both;
+    content: '';
+    display: table; }
+
+/* Page colors */
+body {
+  background: #f2f3f4;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px; }
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1em;
+  margin-bottom: 22px; }
+
+h2 {
+  font-size: 1.625em;
+  /* 26px/16px */
+  line-height: 1.2692307692307692em;
+  /* 33px/26px */
+  margin-bottom: 11px; }
+
+h3 {
+  font-size: 1.25em; }
+
+h4 {
+  font-size: 1.125; }
+
+p {
+  font-size: 1em;
+  line-height: 1.5714285714285714em;
+  margin-bottom: 11px; }
+
+a {
+  color: #3fa5e3;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.ts-btn {
+  border: 0;
+  background: rgba(120, 92, 171, 0.85);
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: 300;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s; }
+  .ts-btn:hover {
+    background: #785cab;
+    text-decoration: none; }
+
+.ts-btn-simple {
+  background: transparent;
+  border: 1px solid #785cab;
+  border-radius: 3px;
+  color: #785cab;
+  display: inline-block;
+  padding: 10px 20px;
+  -webkit-transition: border, color .3s;
+  transition: border, color .3s; }
+  .ts-btn-simple:hover {
+    border: 1px solid #3d2e59;
+    color: #3d2e59;
+    text-decoration: none; }
+
+.ts-btn-small {
+  padding: 5px 10px; }
+
+.ts-btn-big {
+  padding: 10px 25px; }
+
+.telespor-header {
+  height: 70px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9999; }
+  .telespor-header .telespor-mobile-hamburger {
+    display: none; }
+  .telespor-header .telespor-header-wrap {
+    height: 70px;
+    margin: 0 auto;
+    max-width: 1230px;
+    padding: 0 15px; }
+    .telespor-header .telespor-header-wrap .telespor-header-logo {
+      background: url("images/telespor_logo.svg") center/115px no-repeat;
+      float: left;
+      height: 70px;
+      margin: 0;
+      text-indent: -9999px; }
+      .telespor-header .telespor-header-wrap .telespor-header-logo a {
+        display: block;
+        height: 70px;
+        width: 150px; }
+    .telespor-header .telespor-header-wrap .telespor-header-main-nav {
+      float: right;
+      margin: 35px 0 0;
+      overflow: auto;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+      .telespor-header .telespor-header-wrap .telespor-header-main-nav .telespor-close-nav {
+        display: none; }
+      .telespor-header .telespor-header-wrap .telespor-header-main-nav ul {
+        font-size: 0.75em;
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        .telespor-header .telespor-header-wrap .telespor-header-main-nav ul li {
+          float: left;
+          margin: 0 15px 0 0; }
+        .telespor-header .telespor-header-wrap .telespor-header-main-nav ul a {
+          border-radius: 15px;
+          color: #fff;
+          display: block;
+          padding: 6px 10px;
+          text-decoration: none;
+          text-transform: uppercase;
+          -webkit-transition: background 0.3s;
+          transition: background 0.3s; }
+          .telespor-header .telespor-header-wrap .telespor-header-main-nav ul a i {
+            display: none;
+            font-size: 1.3em;
+            margin: 0 10px 0 0;
+            text-align: center;
+            width: 20px; }
+          .telespor-header .telespor-header-wrap .telespor-header-main-nav ul a:hover {
+            background: rgba(255, 255, 255, 0.3); }
+        .telespor-header .telespor-header-wrap .telespor-header-main-nav ul .sign-in-button {
+          background: rgba(120, 92, 171, 0.3);
+          border-radius: 15px;
+          -webkit-transition: background 0.3s;
+          transition: background 0.3s; }
+          .telespor-header .telespor-header-wrap .telespor-header-main-nav ul .sign-in-button:hover {
+            background: #785cab; }
+          .telespor-header .telespor-header-wrap .telespor-header-main-nav ul .sign-in-button:hover > a {
+            background: transparent;
+            color: #fff; }
+          .telespor-header .telespor-header-wrap .telespor-header-main-nav ul .sign-in-button a {
+            color: #fff;
+            -webkit-transition: color 0.3s;
+            transition: color 0.3s; }
+
+@media (max-width: 820px) {
+  .telespor-header {
+    height: 60px; }
+    .telespor-header .telespor-mobile-hamburger {
+      background: url("images/icons/hamburger.svg") right/25px no-repeat;
+      display: block;
+      float: right;
+      height: 60px;
+      width: 60px; }
+    .telespor-header .telespor-header-logo {
+      background: url("images/telespor_logo.svg") 0 12px/100px no-repeat !important; }
+      .telespor-header .telespor-header-logo a {
+        height: 60px !important;
+        width: 100px !important; }
+    .telespor-header .telespor-header-main-nav {
+      background: rgba(34, 34, 34, 0.95);
+      float: none !important;
+      height: 100vh;
+      margin: 0 !important;
+      position: fixed;
+      right: -250px;
+      top: 0;
+      -webkit-transform: none !important;
+              transform: none !important;
+      -webkit-transition: right .5s;
+      transition: right .5s;
+      width: 250px; }
+      .telespor-header .telespor-header-main-nav .telespor-mobile-nav-header {
+        background: #bbb;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        float: left;
+        margin: 0 0 15px;
+        width: 100%; }
+      .telespor-header .telespor-header-main-nav .telespor-close-nav {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        display: block !important;
+        font-size: 1.5em;
+        opacity: 0.7;
+        padding: 5px 15px;
+        -webkit-transition: opacity 0.3s;
+        transition: opacity 0.3s; }
+        .telespor-header .telespor-header-main-nav .telespor-close-nav:hover {
+          opacity: 1; }
+      .telespor-header .telespor-header-main-nav ul li {
+        display: block;
+        margin: 0 0 10px !important;
+        width: 100%; }
+        .telespor-header .telespor-header-main-nav ul li a {
+          border-radius: 0 !important;
+          padding: 8px 15px !important; }
+          .telespor-header .telespor-header-main-nav ul li a i {
+            display: inline-block !important; }
+      .telespor-header .telespor-header-main-nav ul .sign-in-button {
+        border-radius: 0 !important; } }
+
+.telespor-footer {
+  background: #fff;
+  border-top: 1px solid #e1e1e1; }
+
+.footer-wrap {
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 30px 15px; }
+  .footer-wrap .footer-nav h2,
+  .footer-wrap .footer-contact h2,
+  .footer-wrap .copyright h2 {
+    color: #785cab;
+    font-size: 1em;
+    margin: 0 0 10px;
+    padding: 0; }
+  .footer-wrap .footer-nav {
+    color: #6d7179;
+    float: left;
+    font-size: 0.85em;
+    margin: 0 150px 0 0; }
+    .footer-wrap .footer-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .footer-wrap .footer-nav ul a {
+        color: #6d7179;
+        display: block;
+        font-weight: 300;
+        margin: 0 0 5px;
+        text-decoration: none; }
+        .footer-wrap .footer-nav ul a:hover {
+          color: #222;
+          text-decoration: underline; }
+  .footer-wrap .footer-contact {
+    color: #6d7179;
+    float: left;
+    font-size: 0.85em;
+    font-weight: 300; }
+    .footer-wrap .footer-contact p {
+      margin: 0 0 5px; }
+
+.copyright {
+  background: #fff;
+  border-top: 1px solid #e1e1e1;
+  color: #a0a0a0;
+  font-size: 0.85em;
+  font-weight: 300;
+  margin: 0;
+  padding: 15px;
+  text-align: center; }
+
+@media (max-width: 600px) {
+  .footer-wrap .footer-nav {
+    margin: 0 0 40px; } }
+
+html {
+  box-sizing: border-box; }
+
+* {
+  box-sizing: inherit; }
+  *::before {
+    box-sizing: inherit; }
+  *::after {
+    box-sizing: inherit; }
+
+.telespor-container {
+  min-height: calc(100vh - 280px); }
+
+.page-wrap {
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 15px; }
+
+img {
+  height: auto;
+  max-width: 100%; }
+
+.telespor-wrap {
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 15px; }
+
+.alignright {
+  float: right; }
+
+.site-section-white {
+  background: #fff;
+  padding: 50px 0; }
+
+.site-section {
+  padding: 50px 0; }
+
+/* Splitters */
+.ts-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .ts-grid .ts-1of2 {
+    padding: 0 15px 0 0;
+    width: 50%; }
+  .ts-grid .ts-2of2 {
+    padding: 0 0 0 15px;
+    width: 50%; }
+
+@media (max-width: 768px) {
+  .ts-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ts-grid .ts-1of2,
+    .ts-grid .ts-2of2 {
+      padding: 0;
+      width: 100%; } }
+
+.margin-t-b-50 {
+  margin: 50px 0; }
+
+.jumbo {
+  background: #222;
+  min-height: 235px;
+  padding-top: 70px; }
+  .jumbo h1 {
+    color: #fff;
+    font-weight: 300;
+    margin: 0;
+    padding: 50px;
+    text-align: center; }
+
+.telespor-front-page-jumbo {
+  background: #222 url("images/nature_v2.jpg") no-repeat center;
+  background-size: cover;
+  border-bottom: 2px solid #222;
+  height: 765px; }
+
+.telespor-jumbo-wrapper {
+  height: 100%;
+  position: relative;
+  text-align: center; }
+  .telespor-jumbo-wrapper .telespor-description {
+    background: rgba(34, 34, 34, 0.5);
+    border-bottom: 1px solid #222;
+    font-weight: bold;
+    left: 0;
+    margin: 0 auto;
+    padding: 120px 15px 50px;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .telespor-jumbo-wrapper .telespor-description h1 {
+      border-radius: 5px;
+      color: #fff;
+      font-weight: 900;
+      margin: 0 auto;
+      padding: 0; }
+      .telespor-jumbo-wrapper .telespor-description h1 span {
+        font-weight: 300; }
+    .telespor-jumbo-wrapper .telespor-description p {
+      color: #f9f9f9;
+      font-weight: 300;
+      text-align: center; }
+    .telespor-jumbo-wrapper .telespor-description .produkt-cta {
+      background: rgba(120, 92, 171, 0.8);
+      border-radius: 5px;
+      color: #fff;
+      display: inline-block;
+      font-weight: 300;
+      margin: 50px 0 0;
+      padding: 10px 20px;
+      text-decoration: none;
+      -webkit-transition: background 0.3s;
+      transition: background 0.3s; }
+      .telespor-jumbo-wrapper .telespor-description .produkt-cta:hover {
+        background: #785cab; }
+
+@media (max-width: 800px) {
+  .telespor-front-page-jumbo {
+    height: 500px; }
+    .telespor-front-page-jumbo .telespor-description h1 {
+      font-size: 1.7em;
+      line-height: 1.2em; }
+    .telespor-front-page-jumbo .telespor-description p {
+      font-size: 0.9em; } }
+
+.telespor-features {
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 60px 0; }
+  .telespor-features h2 {
+    color: #785cab;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 60px;
+    text-align: center; }
+  .telespor-features .product-cta-wrapper {
+    padding: 50px 0 0;
+    text-align: center; }
+
+.feature-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 15px; }
+  .feature-wrapper .single-feature {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 40px;
+    padding: 15px;
+    width: 400px; }
+    .feature-wrapper .single-feature img {
+      height: 30px;
+      padding: 0 20px 0 0;
+      width: 50px; }
+    .feature-wrapper .single-feature .single-feature-description {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      .feature-wrapper .single-feature .single-feature-description h3 {
+        color: #444;
+        margin: 0; }
+      .feature-wrapper .single-feature .single-feature-description p {
+        color: #6d7179;
+        font-size: 0.85em;
+        line-height: 1.5em; }
+
+@media (max-width: 1230px) {
+  .feature-wrapper {
+    margin: 0 auto;
+    width: 830px; } }
+
+@media (max-width: 830px) {
+  .feature-wrapper {
+    margin: 0 auto;
+    max-width: 400px;
+    width: auto; }
+    .feature-wrapper .single-feature {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0 0 40px;
+      padding: 15px;
+      width: 100%; } }
+
+.telespor-news {
+  padding: 50px 0 0 0; }
+  .telespor-news h2 {
+    color: #785cab;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 50px;
+    text-align: center; }
+
+.user-dashboard-wrap {
+  padding: 0 0 50px 0;
+  text-align: center; }
+
+.news-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 50px auto; }
+  .news-list .ts-news-item {
+    background: #fff;
+    margin: 25px;
+    width: 349px; }
+    .news-list .ts-news-item .ts-news-image {
+      height: 200px;
+      position: relative;
+      z-index: 480; }
+      .news-list .ts-news-item .ts-news-image .darken-image {
+        background: rgba(34, 34, 34, 0.5);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 500; }
+      .news-list .ts-news-item .ts-news-image h2 {
+        bottom: 20px;
+        color: #fff;
+        font-size: 1.3em;
+        font-weight: 300;
+        left: 20px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 20px;
+        text-align: left;
+        z-index: 510; }
+      .news-list .ts-news-item .ts-news-image .ts-news-link {
+        color: #fff;
+        -webkit-transition: 0.2s color;
+        transition: 0.2s color; }
+        .news-list .ts-news-item .ts-news-image .ts-news-link:hover {
+          color: #00a474;
+          text-decoration: none; }
+    .news-list .ts-news-item p {
+      color: #6d7179;
+      font-weight: 300;
+      padding: 0 20px; }
+    .news-list .ts-news-item .ts-news-article-time {
+      border-bottom: 1px solid #e1e1e1;
+      color: #868c96;
+      font-size: 0.75em;
+      font-weight: 300;
+      margin: 0;
+      padding: 5px 20px;
+      text-align: right; }
+    .news-list .ts-news-item .ts-news-excerpt {
+      margin: 0;
+      padding: 10px 20px; }
+
+@media (max-width: 1230px) {
+  .news-list {
+    max-width: 930px; }
+    .news-list .ts-news-item {
+      background: #fff;
+      width: 400px; } }
+
+@media (max-width: 930px) {
+  .news-list {
+    max-width: 400px; }
+    .news-list .ts-news-item {
+      background: #fff;
+      margin: 0 0 40px;
+      max-width: 400px; } }
+
+.product-jumbo {
+  background: #603e8e;
+  padding: 70px 0 0; }
+  .product-jumbo h1 {
+    color: #fff;
+    margin: 0;
+    padding: 50px;
+    text-align: center; }
+
+.product-information {
+  background: #fff;
+  padding: 50px 0; }
+
+.product-info-wrap {
+  text-align: center; }
+  .product-info-wrap h2 {
+    color: #785cab;
+    font-weight: 300; }
+  .product-info-wrap .product-image {
+    margin: 0 auto;
+    width: 500px; }
+    .product-info-wrap .product-image img {
+      width: 100%; }
+
+@media (max-width: 550px) {
+  .product-info-wrap .product-image {
+    width: 100%; } }
+
+/* Mini features */
+.product-feature-section {
+  padding: 50px 0; }
+  .product-feature-section .product-mini-feature-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .product-feature-section .product-mini-feature-wrap .product-feature {
+      padding: 0 20px;
+      text-align: center;
+      width: 24.9%; }
+      .product-feature-section .product-mini-feature-wrap .product-feature img {
+        height: 80px;
+        margin: 0 0 30px; }
+      .product-feature-section .product-mini-feature-wrap .product-feature h4 {
+        color: #785cab;
+        font-size: 1em;
+        font-weight: 400;
+        margin: 0 0 10px;
+        padding: 0; }
+      .product-feature-section .product-mini-feature-wrap .product-feature p {
+        color: #6d7179;
+        font-size: 0.9em;
+        font-weight: 300;
+        line-height: 1.7em;
+        margin: 0 0 2em; }
+
+@media (max-width: 1000px) {
+  .product-feature-section .product-mini-feature-wrap .product-feature {
+    margin: 0 0 40px;
+    width: 50%; } }
+
+@media (max-width: 620px) {
+  .product-feature-section .product-mini-feature-wrap .product-feature {
+    width: 100%; } }
+
+.product-info-section {
+  background: #fff;
+  padding: 50px 0; }
+  .product-info-section .info-description {
+    font-size: 0.9em;
+    font-weight: 300; }
+    .product-info-section .info-description h2 {
+      font-size: 1.5em;
+      font-weight: 300; }
+    .product-info-section .info-description .alert-types .alert-type {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .product-info-section .info-description .alert-types .alert-type i {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        color: #785cab;
+        font-size: 0.5em;
+        margin: 0 10px 0 0; }
+      .product-info-section .info-description .alert-types .alert-type span {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center; }
+
+.product-specifications {
+  background: transparent;
+  font-weight: 300; }
+  .product-specifications .spec-title {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 60px;
+    text-align: center; }
+  .product-specifications .product-specs {
+    padding: 50px 10px; }
+    .product-specifications .product-specs .spec-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .product-specifications .product-specs .spec-section {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 45%; }
+      .product-specifications .product-specs .spec-section .spec-mini-section {
+        margin: 0 0 50px; }
+        .product-specifications .product-specs .spec-section .spec-mini-section h3 {
+          color: #785cab;
+          font-weight: 300;
+          margin: 0 0 15px; }
+      .product-specifications .product-specs .spec-section .spec-size-ilu {
+        font-size: 0.85em;
+        padding: 20px;
+        position: relative;
+        width: 100%; }
+        .product-specifications .product-specs .spec-section .spec-size-ilu .spec-size-height {
+          left: 40%;
+          position: absolute;
+          top: 43%; }
+        .product-specifications .product-specs .spec-section .spec-size-ilu .spec-size-width {
+          bottom: 10%;
+          position: absolute;
+          right: 22%; }
+        .product-specifications .product-specs .spec-section .spec-size-ilu .spec-size-depth {
+          bottom: 10%;
+          left: 18.5%;
+          position: absolute; }
+        .product-specifications .product-specs .spec-section .spec-size-ilu .spec-size-bandwidth {
+          position: absolute;
+          right: 22%;
+          top: 8%; }
+        .product-specifications .product-specs .spec-section .spec-size-ilu .spec-size-bandheight {
+          bottom: 26.8%;
+          position: absolute;
+          right: -2%; }
+
+@media (max-width: 950px) {
+  .product-specifications .product-specs .spec-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .product-specifications .product-specs .spec-wrap .spec-section {
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
+      width: 65%; } }
+
+@media (max-width: 500px) {
+  .product-specifications .product-specs .spec-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .product-specifications .product-specs .spec-wrap .spec-section {
+      width: 100%; } }
+
+sup {
+  color: #785cab;
+  font-size: 1.2em;
+  padding: 1px;
+  position: relative;
+  top: 0; }
+
+.astrix-notice {
+  color: #bbb;
+  font-size: 0.75em; }
+
+.price-ekstra-info {
+  background: rgba(251, 249, 214, 0.25);
+  border-top-left-radius: 5px;
+  font-size: 0.8em;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  color: #6d7179;
+  border: 1px solid #e1e1e1;
+  padding: 10px 20px; }
+  .price-ekstra-info .mva-info {
+    border-bottom: 1px solid #e1e1e1;
+    color: #222;
+    margin-bottom: 5px;
+    padding-bottom: 5px; }
+
+.price-old-info {
+  margin: 0 auto;
+  background: #fffee9;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #666;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  font-size: 0.85em;
+  max-width: 650px; }
+  .price-old-info a {
+    color: #785cab; }
+    .price-old-info a:hover {
+      color: #785cab; }
+
+.ts-price-extras {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 50px; }
+
+.ts-prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 50px auto; }
+
+@media (max-width: 1250px) {
+  .ts-prices,
+  .ts-price-extras {
+    margin: 50px auto;
+    max-width: 800px; } }
+
+@media (max-width: 820px) {
+  .ts-prices,
+  .ts-price-extras {
+    margin: 50px auto;
+    max-width: 400px; } }
+
+.ts-price-table {
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  margin: 10px;
+  padding: 10px;
+  width: 380px; }
+  .ts-price-table h3 {
+    border-bottom: 1px solid #e1e1e1;
+    color: #444;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center; }
+  .ts-price-table .price {
+    border-bottom: 1px solid #e1e1e1;
+    color: #ccc;
+    padding: 30px 20px;
+    text-align: center; }
+  .ts-price-table .big-price {
+    color: #222;
+    font-size: 1.5em;
+    font-weight: bold; }
+  .ts-price-table .price-info ul {
+    color: #6d7179;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .ts-price-table .price-info li {
+    border-bottom: 1px dashed #e1e1e1;
+    font-size: .9em;
+    padding: 10px 20px; }
+    .ts-price-table .price-info li:last-child {
+      border-bottom: 0; }
+    .ts-price-table .price-info li .fa-check-circle-o {
+      color: #00a474;
+      margin-right: 5px; }
+
+.ts-price-cta-wrap {
+  padding: 50px;
+  text-align: center; }
+  .ts-price-cta-wrap .ts-price-cta {
+    background: none;
+    border: 1px solid #785cab;
+    border-radius: 3px;
+    color: #785cab;
+    padding: 10px 20px; }
+
+.ts-price-klaver {
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  padding: 15px;
+  max-width: 500px;
+  margin: 50px auto; }
+  .ts-price-klaver h2 {
+    background: #f9f9f9;
+    margin: -15px 0 20px -15px;
+    width: calc(100% + 30px);
+    border-bottom: 1px solid #e1e1e1;
+    padding: 8px 15px;
+    color: #444;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 400; }
+  .ts-price-klaver p {
+    color: #6d7179;
+    font-weight: 300;
+    margin: 0 0 20px 0; }
+  .ts-price-klaver .klaver-wrap {
+    text-align: center; }
+    .ts-price-klaver .klaver-wrap a:first-child {
+      margin-right: 10px; }
+
+.ts-extras-title {
+  font-weight: 300;
+  text-align: center; }
+
+.ts-price-calculator {
+  background: #fff;
+  padding: 50px 0; }
+  .ts-price-calculator h2 {
+    font-weight: 300;
+    margin: 0 0 50px;
+    text-align: center; }
+  .ts-price-calculator .calc-name {
+    text-align: center;
+    font-weight: 400;
+    color: #785cab; }
+  .ts-price-calculator .ts-price-calc-unit {
+    margin: 0 auto;
+    max-width: 400px;
+    font-weight: 300; }
+    .ts-price-calculator .ts-price-calc-unit h3 {
+      margin: 20px 0 10px 0;
+      font-size: 1em;
+      font-weight: 400;
+      text-align: center; }
+    .ts-price-calculator .ts-price-calc-unit .calc-subsc {
+      width: 180px;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 10px; }
+      .ts-price-calculator .ts-price-calc-unit .calc-subsc .calc-subsc-type {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: 25px; }
+        .ts-price-calculator .ts-price-calc-unit .calc-subsc .calc-subsc-type input {
+          -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+              align-self: center;
+          margin-right: 5px; }
+        .ts-price-calculator .ts-price-calc-unit .calc-subsc .calc-subsc-type span {
+          -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+              align-self: center; }
+    .ts-price-calculator .ts-price-calc-unit .calc-number {
+      font-weight: 400;
+      margin: 30px auto;
+      width: 100px; }
+      .ts-price-calculator .ts-price-calc-unit .calc-number input {
+        font-weight: 300;
+        width: 50px;
+        border-radius: 5px;
+        border: 1px solid #e1e1e1;
+        padding: 5px;
+        text-align: center; }
+  .ts-price-calculator .ts-btn-calc-submit {
+    margin: 50px 0;
+    text-align: center; }
+  .ts-price-calculator .price-results-max {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    display: none;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 15px;
+    text-align: center; }
+    .ts-price-calculator .price-results-max p {
+      margin: 0 0 20px; }
+  .ts-price-calculator .price-results {
+    display: none;
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 375px;
+    position: relative; }
+    .ts-price-calculator .price-results .print-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.2em; }
+    .ts-price-calculator .price-results h2 {
+      margin: 0 0 15px 0; }
+    .ts-price-calculator .price-results .price-results-section {
+      margin-bottom: 30px;
+      border: 1px solid #e1e1e1;
+      border-radius: 5px;
+      overflow: hidden; }
+      .ts-price-calculator .price-results .price-results-section .price-section-title {
+        background: rgba(158, 158, 166, 0.1);
+        padding: 10px;
+        border-bottom: 1px solid #e1e1e1; }
+      .ts-price-calculator .price-results .price-results-section h3 {
+        font-size: 1.1em;
+        font-weight: 300;
+        margin: 0 0 5px 0; }
+      .ts-price-calculator .price-results .price-results-section em {
+        display: block;
+        font-size: 0.8em;
+        color: #ccc; }
+      .ts-price-calculator .price-results .price-results-section .price-section {
+        border-bottom: 1px dotted #e1e1e1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 10px; }
+        .ts-price-calculator .price-results .price-results-section .price-section .price-desc {
+          display: inline-block;
+          font-weight: 400;
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1; }
+        .ts-price-calculator .price-results .price-results-section .price-section:last-child {
+          margin-bottom: 0;
+          border-bottom: 0; }
+
+.contact-jumbo {
+  background: #3c4b5b; }
+
+.contact-box {
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 30px;
+  width: 100%; }
+  .contact-box .contact-box-title {
+    border-bottom: 1px solid #e1e1e1;
+    color: #444;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 20px;
+    padding: 10px 20px; }
+    .contact-box .contact-box-title h2 {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      font-weight: 400;
+      margin: 0;
+      padding: 0; }
+    .contact-box .contact-box-title i {
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
+      font-size: 1.7em; }
+  .contact-box p {
+    color: #6d7179;
+    font-weight: 300;
+    margin: 0;
+    padding: 10px 20px; }
+  .contact-box .warning {
+    color: #bbb;
+    font-size: 0.75em; }
+  .contact-box .country-code {
+    color: #bbb; }
+
+.contact-phone .phone-number {
+  font-size: 1.2em; }
+
+@media (max-width: 930px) {
+  .ts-contact-methods .contact-box {
+    margin: 0;
+    margin-bottom: 50px;
+    width: 100%; } }
+
+.ts-contact-form {
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  padding: 15px;
+  width: 100%; }
+  .ts-contact-form h3 {
+    display: none; }
+  .ts-contact-form .ninja-forms-req-symbol {
+    color: #3f0000; }
+  .ts-contact-form .nf-form-fields-required {
+    display: none; }
+  .ts-contact-form .nf-error input,
+  .ts-contact-form .nf-error textarea {
+    border: 1px solid #ffcccc; }
+  .ts-contact-form .nf-error-required-error,
+  .ts-contact-form .nf-error-invalid-email {
+    background: #ffcccc;
+    border: 1px solid #ffcccc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #3f0000;
+    font-size: 0.8em;
+    margin-top: -6px;
+    padding: 5px;
+    width: 100%; }
+  .ts-contact-form .nf-error-field-errors {
+    color: #3f0000;
+    font-size: 0.8em; }
+  .ts-contact-form .recaptcha-wrap .nf-field-label {
+    display: none; }
+  .ts-contact-form input,
+  .ts-contact-form textarea {
+    border: 1px solid #e1e1e1;
+    outline: none;
+    padding: 5px;
+    resize: none; }
+  .ts-contact-form input[type='button'] {
+    background: transparent;
+    border: 1px solid #785cab;
+    border-radius: 3px;
+    color: #785cab;
+    display: inline-block;
+    padding: 10px 20px;
+    -webkit-transition: border, color .3s;
+    transition: border, color .3s; }
+    .ts-contact-form input[type='button']:hover {
+      border: 1px solid #3d2e59;
+      color: #3d2e59;
+      text-decoration: none; }
+
+.jumbo-single-post {
+  min-height: 400px;
+  position: relative; }
+  .jumbo-single-post .jumbo-darken {
+    background: rgba(34, 34, 34, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 500; }
+  .jumbo-single-post .jubo-content {
+    bottom: 20px;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    z-index: 600; }
+    .jumbo-single-post .jubo-content h2 {
+      color: #fff;
+      font-size: 2.2em;
+      font-weight: 300;
+      margin: 0 0 10px; }
+    .jumbo-single-post .jubo-content .article-time {
+      color: #bbb;
+      font-weight: 300;
+      margin: 0; }
+
+.single-news-article {
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  margin: 50px 0;
+  max-width: 800px;
+  padding: 15px 30px; }
+/*# sourceMappingURL=style.css.map */
