@@ -131,6 +131,12 @@ function my_acf_add_local_field_groups() {
 
     $home_page = get_page_by_title('Hjem');
     $contact_page = get_page_by_title('Kontakt Oss');
+    $product_page = get_page_by_title('Produkt');
+
+    /* Make sure required pages are set up */
+    if (!$home_page || !$contact_page || !$product_page){
+        return;
+    }
 
     if(function_exists("register_field_group"))
     {
@@ -312,6 +318,103 @@ function my_acf_add_local_field_groups() {
     					'param' => 'page',
     					'operator' => '==',
     					'value' => $contact_page->ID,
+    					'order_no' => 0,
+    					'group_no' => 0,
+    				),
+    			),
+    		),
+    		'options' => array (
+    			'position' => 'normal',
+    			'layout' => 'no_box',
+    			'hide_on_screen' => array (
+    				0 => 'the_content',
+    			),
+    		),
+    		'menu_order' => 0,
+    	));
+
+        /* Product page */
+        register_field_group(array (
+    		'id' => 'acf_produkt',
+    		'title' => 'Produkt',
+    		'fields' => array (
+    			array (
+    				'key' => 'field_58a43ef113148',
+    				'label' => 'Produkt Bilde',
+    				'name' => 'product_image',
+    				'type' => 'image',
+    				'save_format' => 'object',
+    				'preview_size' => 'medium',
+    				'library' => 'all',
+    			),
+    			array (
+    				'key' => 'field_58a43f4418fb2',
+    				'label' => 'GPS Sporing',
+    				'name' => 'info_gps',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h4>GPS Sporing</h4>
+    	<p>Radiobjella sender sin posisjon slik at du kan se hvor dyret ditt er og hvor det har vært. Du velger selv hvor ofte du vil at posisjonen skal oppdateres, fra hvert 5. min og oppover.</p>',
+    				'toolbar' => 'full',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a43fe4b85fa',
+    				'label' => 'Toveis kommunikasjon',
+    				'name' => 'info_communication',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h4>Toveis kommunikasjon</h4>
+    	<p>Du kan når som helst endre på hvor ofte radiobjella skal send sin posisjon eller hvor sensitiv alarmene skal være. Hver gang radiobjella sender sin posisjon vil den hente de oppdaterte innstillingene du har valgt.</p>',
+    				'toolbar' => 'full',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a4406261222',
+    				'label' => 'SMS Varsling',
+    				'name' => 'info_sms',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h4>SMS Varsling</h4>
+    	<p>Velg og bli varslet via SMS dersom det skjer noe med radiobjella. Velg selv om du vil bli varslet om lavt batteri, ingen bevegelse eller at dyret er utenfor dekning.</p>',
+    				'toolbar' => 'full',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a4408161223',
+    				'label' => 'Vanntett',
+    				'name' => 'info_water',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h4>Vanntett</h4>
+    	<p>Radiobjella er vanntett og tåler all slags vær eller om dyret ditt bestemmer seg for å ta seg en svømmetur.</p>',
+    				'toolbar' => 'full',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a43ea483e26',
+    				'label' => 'Produkt Beskrivelse',
+    				'name' => 'product_description',
+    				'type' => 'wysiwyg',
+    				'instructions' => 'Diverse informasjon om produktet',
+    				'default_value' => '<h2>Bevegelsessensor</h2>
+
+    	<p>Hver enhet har innbygd bevegelsessensor som utløses dersom noe uventet skulle skje.</p>
+    	<p>Radiobjella er utstyrt med 3 alarmer:</p>
+    	<p class="alert-types">
+    	<span class="alert-type"><i class="fa fa-plus" aria-hidden="true"></i><span>Dyret har ikke beveget seg de siste 3 timene.</span></span>
+    	<span class="alert-type"><i class="fa fa-plus" aria-hidden="true"></i><span>Dyret har vært på samme posisjon i en lengre periode.</span></span>
+    	<span class="alert-type"><i class="fa fa-plus" aria-hidden="true"></i><span>Radiobjella har ikke klart å sende sin posisjon de siste 2 rapportene.</span></span></p>
+
+    	<p>Følsomheten på disse kan man justere dersom et dyr er naturlig mindre aktiv.<br />
+    	Du velger selv om du vil bli varslet via e-post eller SMS<sup>*</sup> dersom en alarm blir utløst.</p>
+    	<p class="astrix-notice">* Ved SMS medfølger ekstra gebyrer.</p>',
+    				'toolbar' => 'full',
+    				'media_upload' => 'no',
+    			),
+    		),
+    		'location' => array (
+    			array (
+    				array (
+    					'param' => 'page',
+    					'operator' => '==',
+    					'value' => $product_page->ID,
     					'order_no' => 0,
     					'group_no' => 0,
     				),

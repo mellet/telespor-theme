@@ -38,27 +38,22 @@ get_header();
     <div class="product-mini-feature-wrap telespor-wrap">
         <div class="product-feature">
             <img src="<?php echo get_bloginfo('template_directory');?>/images/icons/satelite.svg" alt="" width="150px" />
-            <h4>GPS Sporing</h4>
-            <p>Radiobjella sender sin posisjon slik at du kan se hvor dyret ditt er og hvor det har vært.
-            Du velger selv hvor ofte du vil at posisjonen skal oppdateres, fra hvert 5. min og oppover.</p>
+            <?php the_field('info_gps') ?>
         </div>
 
         <div class="product-feature">
             <img src="<?php echo get_bloginfo('template_directory');?>/images/icons/sheepsync.svg" alt="" width="150px" />
-            <h4>Toveis kommunikasjon</h4>
-            <p>Du kan når som helst endre på hvor ofte radiobjella skal send sin posisjon eller hvor sensitiv alarmene skal være. Hver gang radiobjella sender sin posisjon vil den hente de oppdaterte innstillingene du har valgt.</p>
+            <?php the_field('info_communication') ?>
         </div>
 
         <div class="product-feature">
             <img src="<?php echo get_bloginfo('template_directory');?>/images/icons/mobile.svg" alt="" width="150px" />
-            <h4>SMS Varsling</h4>
-            <p>Velg og bli varslet via SMS dersom det skjer noe med radiobjella. Velg selv om du vil bli varslet om lavt batteri, ingen bevegelse eller at dyret er utenfor dekning.</p>
+            <?php the_field('info_sms') ?>
         </div>
 
         <div class="product-feature">
             <img src="<?php echo get_bloginfo('template_directory');?>/images/icons/water.svg" alt="" width="120px" />
-            <h4>Vanntett</h4>
-            <p>Radiobjella er vanntett og tåler all slags vær eller om dyret ditt bestemmer seg for å ta seg en svømmetur.</p>
+            <?php the_field('info_water') ?>
         </div>
 
     </div>
@@ -69,19 +64,7 @@ get_header();
     <div class="telespor-wrap">
         <div class="info-description">
             <div class="description">
-                <h2>Bevegelsessensor</h2>
-                <p>Hver enhet har innbygd bevegelsessensor som utløses dersom noe uventet skulle skje.</p>
-
-                <p>Radiobjella er utstyrt med 3 alarmer:</p>
-                <p class="alert-types">
-                    <span class="alert-type"><i class="fa fa-plus" aria-hidden="true"></i><span>Dyret har ikke beveget seg de siste 3 timene.</span></span>
-                    <span class="alert-type"><i class="fa fa-plus" aria-hidden="true"></i><span>Dyret har vært på samme posisjon i en lengre periode.</span></span>
-                    <span class="alert-type"><i class="fa fa-plus" aria-hidden="true"></i><span>Radiobjella har ikke klart å sende sin posisjon de siste 2 rapportene.</span></span>
-                </p>
-
-                <p>Følsomheten på disse kan man justere dersom et dyr er naturlig mindre aktiv.<br />
-                Du velger selv om du vil bli varslet via e-post eller SMS<sup>*</sup> dersom en alarm blir utløst.</p>
-                <p class="astrix-notice">* Ved SMS medfølger ekstra gebyrer.</p>
+                <?php the_field('product_description') ?>
             </div>
         </div>
     </div>
