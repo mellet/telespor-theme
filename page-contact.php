@@ -19,8 +19,8 @@ get_header();
                         <i class="fa fa-phone" aria-hidden="true"></i>
                     </div>
 
-                    <p>Åpent mandag - fredag, 08.00 - 16.00</p>
-                    <p class="phone-number"><span class="country-code">+47</span> 90 47 46 00</p>
+                    <p><?php the_field('support_open_time') ?></p>
+                    <p class="phone-number"><span class="country-code">+47</span> <?php the_field('contact_number') ?></p>
                     <p class="warning">NB! Vi kan ikke motta SMS.</p>
                 </div>
 
@@ -29,9 +29,7 @@ get_header();
                         <h2>Postadresse</h2>
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     </div>
-                    <p>Sykehusveien 23<br />
-                    Postboks 6427<br />
-                    9294 Tromsø</p>
+                    <?php the_field('contact_address') ?>
                 </div>
             </div>
             <div class="ts-2of2">

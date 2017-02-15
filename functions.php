@@ -3,10 +3,14 @@
  * Telespor functions for theme setup
  */
 
-$current_version = 1.13;
+$current_version = 1.15;
+
+//define( 'ACF_LITE' , true );
 
 //Theme setup
 function telespor_setup() {
+
+
 
     //Title title
     add_theme_support( 'title-tag' );
@@ -120,5 +124,213 @@ function wpdocs_theme_add_editor_styles() {
     add_editor_style( 'tiny_mce.css' );
 }
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
+
+/* Register AFC fields */
+function my_acf_add_local_field_groups() {
+
+    $home_page = get_page_by_title('Hjem');
+    $contact_page = get_page_by_title('Kontakt Oss');
+
+    if(function_exists("register_field_group"))
+    {
+        /* Front page fields */
+    	register_field_group(array (
+    		'id' => 'acf_forside',
+    		'title' => 'Forside',
+    		'fields' => array (
+    			array (
+    				'key' => 'field_58a4319551ca8',
+    				'label' => 'Velkomst tittel - fet',
+    				'name' => 'welcomeTextFat',
+    				'type' => 'text',
+    				'instructions' => 'Velkomst tekst på forside. Fet del.',
+    				'default_value' => 'ELEKTRONISK',
+    				'placeholder' => 'ELEKTRONISK',
+    				'prepend' => '',
+    				'append' => '',
+    				'formatting' => 'html',
+    				'maxlength' => '',
+    			),
+    			array (
+    				'key' => 'field_58a431fc94bc2',
+    				'label' => 'Velkomst tittel - tynn',
+    				'name' => 'welcomeTextSkinny',
+    				'type' => 'text',
+    				'instructions' => 'Velkomst tekst på forside. Tynn del.',
+    				'default_value' => 'OVERVÅKING AV HUSDYR',
+    				'placeholder' => 'OVERVÅKING AV HUSDYR',
+    				'prepend' => '',
+    				'append' => '',
+    				'formatting' => 'html',
+    				'maxlength' => '',
+    			),
+    			array (
+    				'key' => 'field_58a4327a588e3',
+    				'label' => 'Egenskaper - Tittel',
+    				'name' => 'feature_title',
+    				'type' => 'text',
+    				'instructions' => 'Egenskaper tittel',
+    				'default_value' => 'Radiobjellas egenskaper',
+    				'placeholder' => 'Radiobjellas egenskaper',
+    				'prepend' => '',
+    				'append' => '',
+    				'formatting' => 'html',
+    				'maxlength' => '',
+    			),
+    			array (
+    				'key' => 'field_58a4328de7d0b',
+    				'label' => 'GPS Lokalisering beskrivelse',
+    				'name' => 'feature_one',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h3>GPS Lokalisering</h3><p>Vi lokaliserer dine dyr og du kan selv velge hvilket koordinatsystem du vil se dyrene dine i. Vi støtter Lat/Lon, UTM, Sweref-99 og ISN93/Lambert 1993.</p>',
+    				'toolbar' => 'basic',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a4329f193d2',
+    				'label' => 'Bevegelsessensor beskrivelse',
+    				'name' => 'feature_two',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h3>Bevegelsessensor</h3><p>Velg hvor ofte enhetene sender sin posisjon. Alt fra hvert 5. minutt til en gang i løpet av døgnet. Alt etter ditt behov. (Batteriet vil brukes opp raskere ved oftere intervaller.)</p>',
+    				'toolbar' => 'basic',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a432af82834',
+    				'label' => 'Toveis kommunikasjon beskrivelse',
+    				'name' => 'feature_three',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h3>Toveis kommunikasjon</h3><p>Hver gang radiobjella sender sin posisjon henter den de nyeste innstilligene du har satt. Du kan dermed fleksibelt endre hvor ofte radiobjella skal rapportere inn i løpet av sesongen.</p>',
+    				'toolbar' => 'basic',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a432ae82833',
+    				'label' => 'SMS Varsling beskrivelse',
+    				'name' => 'feature_four',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h3>SMS Varsling</h3><p>I brukerportalen kan du velge om du vil bli varslet via SMS om en alarm går på radiobjella.</p>',
+    				'toolbar' => 'basic',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a432ad82832',
+    				'label' => 'Klar for vær å vind beskrivelse',
+    				'name' => 'feature_five',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h3>Klar for vær å vind</h3><div class="single-feature-description"><p>Våre enheter tåler det skandinaviske klima og er vanntett.</p></div>',
+    				'toolbar' => 'basic',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a432ce75585',
+    				'label' => 'Gratis Support beskrivelse',
+    				'name' => 'feature_six',
+    				'type' => 'wysiwyg',
+    				'default_value' => '<h3>Gratis Support</h3><p>Alle våres kunder får gratis support og kan ringe i våre åpningtider dersom det er noe man lurer på eller trenger hjelp med.</p>',
+    				'toolbar' => 'basic',
+    				'media_upload' => 'no',
+    			),
+    		),
+    		'location' => array (
+    			array (
+    				array (
+    					'param' => 'page',
+    					'operator' => '==',
+    					'value' => $home_page->ID,
+    					'order_no' => 0,
+    					'group_no' => 0,
+    				),
+    			),
+    		),
+    		'options' => array (
+    			'position' => 'normal',
+    			'layout' => 'no_box',
+    			'hide_on_screen' => array (
+    				0 => 'the_content',
+    			),
+    		),
+    		'menu_order' => 0,
+    	));
+
+        /* Contact page */
+        register_field_group(array (
+    		'id' => 'acf_kontakt',
+    		'title' => 'Kontakt',
+    		'fields' => array (
+    			array (
+    				'key' => 'field_58a438d62fb34',
+    				'label' => 'Support Åpningstider',
+    				'name' => 'support_open_time',
+    				'type' => 'text',
+    				'instructions' => 'Åpningstider',
+    				'default_value' => 'Åpent mandag - fredag, 08.00 - 16.00',
+    				'placeholder' => '',
+    				'prepend' => '',
+    				'append' => '',
+    				'formatting' => 'none',
+    				'maxlength' => '',
+    			),
+    			array (
+    				'key' => 'field_58a439b09308e',
+    				'label' => 'Telefon nummer',
+    				'name' => 'contact_number',
+    				'type' => 'text',
+    				'default_value' => '90 47 46 00',
+    				'placeholder' => '',
+    				'prepend' => '',
+    				'append' => '',
+    				'formatting' => 'none',
+    				'maxlength' => '',
+    			),
+    			array (
+    				'key' => 'field_58a43a288d381',
+    				'label' => 'Addresse',
+    				'name' => 'contact_address',
+    				'type' => 'wysiwyg',
+    				'default_value' => 'Sykehusveien 23<br />
+    	Postboks 6427<br />
+    	9294 Tromsø',
+    				'toolbar' => 'full',
+    				'media_upload' => 'no',
+    			),
+    			array (
+    				'key' => 'field_58a43af688a0e',
+    				'label' => 'Kontakt form',
+    				'name' => 'contact_form',
+    				'type' => 'wysiwyg',
+    				'instructions' => 'Legg til shortcode for kontakt skjema som brukes',
+    				'default_value' => '[contact-form-7 id="364" title="Kontakt"]',
+    				'toolbar' => 'full',
+    				'media_upload' => 'no',
+    			),
+    		),
+    		'location' => array (
+    			array (
+    				array (
+    					'param' => 'page',
+    					'operator' => '==',
+    					'value' => $contact_page->ID,
+    					'order_no' => 0,
+    					'group_no' => 0,
+    				),
+    			),
+    		),
+    		'options' => array (
+    			'position' => 'normal',
+    			'layout' => 'no_box',
+    			'hide_on_screen' => array (
+    				0 => 'the_content',
+    			),
+    		),
+    		'menu_order' => 0,
+    	));
+
+    }
+
+
+}
+add_action('init', 'my_acf_add_local_field_groups');
 
 ?>
