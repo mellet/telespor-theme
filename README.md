@@ -1,15 +1,22 @@
 # Telespor Theme
 
 ## Wordpress Setup
+**#1** Add required pages.    
+**#2** Install plugins.    
+**#3** Enable this Theme.    
+**#4** Change text on pages if you want.    
 
-### Plugin dependencies
+## Plugin dependencies
 * Advanced Custom Fields
 * Font Awesome 4 Menus
 * Arconix FAQ
-* Ninja Forms
-* Mailgun for WordPress
 
-### Required pages
+## Required pages
+
+```
+All page names must match exactly so Advances Custom Fields can localize them.
+```
+
 | Page name     | Template          |
 | ------------- | ----------------- |
 | Hjem          | Default           |
@@ -19,10 +26,10 @@
 | Priser        | Price Template    |
 | Produkt       | Product Template  |
 
-### Appearance Menus
+## Appearance Menus
 ```Enable CSS classes in Screen Options```    
 
-#### Header Menu  
+### Header Menu  
 *Display location: Header Menu*
 
 | Menu item     | Type              | Class                     | URL                                       |
@@ -35,7 +42,7 @@
 | Nettbutikk    | Custom Link       | fa-shopping-cart          | http://nettbutikktelespor.mamutweb.com/   |
 | Brukerportal  | Custom Link       | sign-in-button fa-user-o  | http://www.telespor.org                   |
 
-** Footer Menu **    
+### Footer Menu
 *Display location: Footer Menu*
 
 | Menu item                         | URL                                                                               |
@@ -46,35 +53,12 @@
 | Elektronisk søknadssenter hos DN  | https://soknadssenter.miljodirektoratet.no/                                       |
 
 
+## Wordpress settings
 
-
-### Wordpress settings
-
-**Setting -> Reading**
+###Setting -> Reading
 ```
 Front page display:    
 [x] A static page (select below)
+Front page: Hjem
+Posts page: Nyheter
 ```
-
-# Custom Field Setup
-
-## Custom Fields
-
-### Field Groups
-*All field groups should hide: Content Editor*
-
-#### Forside
-
-*Rules: Page is equal to Hjem*
-
-| Field Order   | Field Label               | Field Name                | Field Type        |
-| ------------- | ------------------------- | ------------------------- | ----------------- |
-| 1             | Velkomst tittel - fet     | welcomeTextFat            | Text              |
-| 2             | Velkomst tittel - tynn    | welcomeTextSkinny         | Text              |
-| 3             | Egeneskaper - tittel      | feature_title             | Text              |
-| 4             | Egenskap 1                | feature_one               | Wysiwyg Editor    |
-| 5             | Egenskap 2                | feature_two               | Wysiwyg Editor    |
-| 6             | Egenskap 3                | feature_three             | Wysiwyg Editor    |
-| 7             | Egenskap 4                | feature_four              | Wysiwyg Editor    |
-| 8             | Egenskap 5                | feature_five              | Wysiwyg Editor    |
-| 9             | Egenskap 6                | feature_six               | Wysiwyg Editor    |
