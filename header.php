@@ -17,7 +17,7 @@
 	<!--[if IE 9]>
 	<script type="text/javascript" src="js/ie/IE9.js"></script>
 	<![endif]-->
-    <!--<script src="https://use.fontawesome.com/a0cfc96730.js"></script>-->
+
 </head>
 
 <body <?php body_class(); ?>>

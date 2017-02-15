@@ -3,14 +3,12 @@
  * Telespor functions for theme setup
  */
 
-$current_version = 1.15;
+$current_version = 1.20;
 
 //define( 'ACF_LITE' , true );
 
 //Theme setup
 function telespor_setup() {
-
-
 
     //Title title
     add_theme_support( 'title-tag' );

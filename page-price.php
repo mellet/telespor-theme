@@ -29,7 +29,7 @@ get_header();
                 <div class="price-info">
                     <ul>
                         <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> 1 batteri inkludert</li>
-                        <li><em>Rabatterte priser tilgjengelig ved kjøp av flere enn 5 enheter. Bruk priskalkulator nederstt på siden for å se priser.</em></li>
+                        <li><em>Rabatterte priser tilgjengelig ved kjøp av flere enn 5 enheter. Bruk priskalkulator nederst på siden for å se priser.</em></li>
                     </ul>
                 </div>
             </div>
@@ -162,7 +162,7 @@ get_header();
 
             <div class="price-results-section">
                 <div class="price-section-title">
-                    <h3> Pris fra 1. år </h3>
+                    <h3> Pris 1. år </h3>
                     <em>Priser inkluderer enhet med batteri og abonnement.</em>
                 </div>
 

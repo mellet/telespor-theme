@@ -18,11 +18,14 @@ function pricify(price) {
     /* If float set to 2 decimals */
     if (isFloat(price)){
         new_price = price.toFixed(2);
+        new_price = new_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");  // Add spacing to thousans
+        new_price = new_price.replace(".", ",");
     } else {
         new_price = price;
+        new_price = new_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");  // Add spacing to thousans
+        new_price = new_price + ',-';  // Add moneymarker
     }
-    new_price = new_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");  // Add spacing to thousans
-    new_price = new_price + ',-';  // Add moneymarker
+
     return new_price;
 }
 
