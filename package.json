@@ -1,0 +1,14 @@
+{
+  "name": "telespor-theme",
+  "version": "1.0.0",
+  "repository": "git@github.com:mellet/telespor-theme.git",
+  "author": "Mellet Solbakk <mellet89@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  }
+}

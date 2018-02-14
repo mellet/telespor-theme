@@ -25,7 +25,7 @@ get_header();
 
             <div class="ts-price-table">
                 <h3>Radiobjella</h3>
-                <div class="price"><span id="price-unit" class="big-price">1 249,-</span> / enhet</div>
+                <div class="price"><span id="price-unit" class="big-price">999,-</span> / enhet</div>
                 <div class="price-info">
                     <ul>
                         <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> 1 batteri inkludert</li>
@@ -36,7 +36,7 @@ get_header();
 
             <div class="ts-price-table">
                 <h3>Sesongabonnement</h3>
-                <div class="price"><span id="price-season-sub" class="big-price">135,-</span> / enhet / sesong</div>
+                <div class="price"><span id="price-season-sub" class="big-price">119,-</span> / enhet / sesong</div>
                 <div class="price-info">
                     <ul>
                         <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> 5 måneders abonnement</li>
@@ -48,7 +48,7 @@ get_header();
 
             <div class="ts-price-table">
                 <h3>Helårsabonnement</h3>
-                <div class="price"><span id="price-year-sub" class="big-price">289,-</span> / enhet / år</div>
+                <div class="price"><span id="price-year-sub" class="big-price">219,-</span> / enhet / år</div>
                 <div class="price-info">
                     <ul>
                         <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> 12 måneders abonnement</li>
@@ -66,7 +66,7 @@ get_header();
 
             <div class="ts-price-table">
                 <h3>Batteri</h3>
-                <div class="price"><span id="price-battery" class="big-price">75,-</span> / stykk</div>
+                <div class="price"><span id="price-battery" class="big-price">55,-</span> / stykk</div>
                 <div class="price-info">
                     <ul>
                         <li>Varer i ca. 2000 målinger</li>

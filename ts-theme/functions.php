@@ -3,7 +3,7 @@
  * Telespor functions for theme setup
  */
 
-$current_version = 1.20;
+$current_version = 1.21;
 
 //define( 'ACF_LITE' , true );
 
@@ -41,7 +41,7 @@ function telespor_scripts() {
 
     wp_enqueue_style( 'telespor-style', get_stylesheet_uri(), array(), $GLOBALS['current_version']);
 
-    wp_enqueue_script( 'script', get_template_directory_uri() . '/js/min/script-min.js', array('jquery'), $GLOBALS['current_version'], true);
+    wp_enqueue_script( 'script', get_template_directory_uri() . '/js/min/script.js', array('jquery'), $GLOBALS['current_version'], true);
 
 }
 add_action( 'wp_enqueue_scripts', 'telespor_scripts' );

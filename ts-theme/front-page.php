@@ -1,6 +1,14 @@
+<?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); ?>
+
 <?php
 
-get_header(); ?>
+if ( !function_exists('the_field') ) {
+    echo "Please install plugin: advanced custom fields.";
+    return;
+} 
+
+?>
+<?php get_header(); ?>
 
 <section class="telespor-front-page-jumbo">
 

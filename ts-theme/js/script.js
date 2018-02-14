@@ -81,10 +81,10 @@ jQuery('.telespor-header-main-nav').on('click touchstart touchmove',function(e){
  */
 
 // Price list
-var price_unit = 1249;
-var price_season_sub = 135;
-var price_year_sub = 289;
-var price_battery = 75;
+var price_unit = 999;
+var price_season_sub = 119;
+var price_year_sub = 175;
+var price_battery = 55;
 var price_sms = 150;
 var price_peiler = 2500;
 
@@ -130,19 +130,18 @@ jQuery('#ts-price-calc').submit(function() {
     var num_units = jQuery('#calc-num').val();
 
     //Detect subscription type
-    if(jQuery('#sub-season').is(':checked')) { sub_price = 135; }
-    else { sub_price = 289; }
+    if(jQuery('#sub-season').is(':checked')) { sub_price = 119; }
+    else { sub_price = 175; }
 
-    if(num_units > 249){ jQuery('.price-results-max').show(); }
-    else { jQuery('.price-results').show(); }
+    jQuery('.price-results').show();
 
     // Select price for currently selected number of units
-    if (num_units > 99)         {current_price = 1040;} // 100+
-    else if (num_units > 49)    {current_price = 1120;} // 50+
-    else if (num_units > 24)    {current_price = 1165;} // 25+
-    else if (num_units > 9)     {current_price = 1190;} // 10+
-    else if (num_units > 4)     {current_price = 1229;} // 5+
-    else                        {current_price = 1249;} // Normal price
+    if (num_units > 99)         {current_price = 850;} // 100+
+    else if (num_units > 49)    {current_price = 899.1;} // 50+
+    else if (num_units > 24)    {current_price = 924.08;} // 25+
+    else if (num_units > 9)     {current_price = 949;} // 10+
+    else if (num_units > 4)     {current_price = 969;} // 5+
+    else                        {current_price = 999;} // Normal price
 
     unit_total = calculate_price(current_price, 0, 0, num_units);
     sub_total = calculate_price(0, sub_price, 0, num_units);
